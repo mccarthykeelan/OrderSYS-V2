@@ -8,7 +8,7 @@ namespace OrderSYS.Models
 {
     public class AccountModel
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string FirstInitial {  get; set; }
         public string Surname { get; set; }
