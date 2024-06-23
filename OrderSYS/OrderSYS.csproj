@@ -128,11 +128,29 @@
     <Compile Include="Views\frmManageAccounts.Designer.cs">
       <DependentUpon>frmManageAccounts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmRegister.cs">
+    <Compile Include="Views\frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <Compile Include="Views\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRegisterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmRegisterAccount.Designer.cs">
+      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRegisterProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmRegisterProduct.Designer.cs">
+      <DependentUpon>frmRegisterProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmUpdateProduct.Designer.cs">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,8 +176,17 @@
     <EmbeddedResource Include="Views\frmManageAccounts.resx">
       <DependentUpon>frmManageAccounts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmRegister.resx">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmRegisterAccount.resx">
+      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmRegisterProduct.resx">
+      <DependentUpon>frmRegisterProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmUpdateProduct.resx">
+      <DependentUpon>frmUpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>

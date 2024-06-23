@@ -48,7 +48,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1867, 69);
+            this.menuStrip2.Size = new System.Drawing.Size(1867, 65);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -65,7 +65,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(1511, 302);
+            this.btnCancel.Location = new System.Drawing.Point(1512, 317);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(344, 124);
             this.btnCancel.TabIndex = 13;
@@ -78,7 +78,7 @@
             this.btnDispatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDispatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDispatch.ForeColor = System.Drawing.Color.White;
-            this.btnDispatch.Location = new System.Drawing.Point(1511, 160);
+            this.btnDispatch.Location = new System.Drawing.Point(1512, 175);
             this.btnDispatch.Name = "btnDispatch";
             this.btnDispatch.Size = new System.Drawing.Size(344, 124);
             this.btnDispatch.TabIndex = 12;
@@ -90,7 +90,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(0)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(1274, 75);
+            this.btnSearch.Location = new System.Drawing.Point(1275, 90);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(231, 62);
             this.btnSearch.TabIndex = 11;
@@ -100,7 +100,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 75);
+            this.textBox1.Location = new System.Drawing.Point(13, 90);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1256, 62);
             this.textBox1.TabIndex = 10;
@@ -108,7 +108,7 @@
             // grdOrders
             // 
             this.grdOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdOrders.Location = new System.Drawing.Point(12, 160);
+            this.grdOrders.Location = new System.Drawing.Point(13, 175);
             this.grdOrders.Name = "grdOrders";
             this.grdOrders.RowHeadersWidth = 92;
             this.grdOrders.RowTemplate.Height = 37;

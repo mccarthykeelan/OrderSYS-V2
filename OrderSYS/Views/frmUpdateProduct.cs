@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrderSYS.Views
 {
-    public partial class frmRegister : Form
+    public partial class frmUpdateProduct : Form
     {
-        public frmRegister()
+        public frmUpdateProduct()
         {
             InitializeComponent();
         }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace OrderSYS.Views
 {
-    public partial class frmLogin : Form, IAccount
+    public partial class frmRegisterAccount : Form, IAccount
     {
-        public frmLogin()
+        public frmRegisterAccount()
         {
             InitializeComponent();
         }
