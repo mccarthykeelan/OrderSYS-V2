@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrderSYS.Views
 {
-    public partial class frmManageUsers : Form
+    public partial class frmManageAccounts : Form
     {
-        public frmManageUsers()
+        public frmManageAccounts()
         {
             InitializeComponent();
         }

@@ -16,5 +16,10 @@ namespace OrderSYS.Views
         {
             InitializeComponent();
         }
+
+        private void frmManageProducts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
