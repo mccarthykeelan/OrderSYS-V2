@@ -375,27 +375,31 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(99)))), ((int)(((byte)(95)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(14, 1879);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(7);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(828, 100);
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnRegister
             // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(114)))));
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(14, 1765);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(7);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(828, 100);
             this.btnRegister.TabIndex = 28;
             this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 

@@ -55,26 +55,26 @@
             // manageUsersToolStripMenuItem
             // 
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(207, 41);
-            this.manageUsersToolStripMenuItem.Text = "Manage Users";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(380, 65);
+            this.manageUsersToolStripMenuItem.Text = "Manage Accounts";
             // 
             // manageProductsToolStripMenuItem
             // 
             this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(246, 41);
+            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(374, 65);
             this.manageProductsToolStripMenuItem.Text = "Manage Products";
             // 
             // manageOrdersToolStripMenuItem
             // 
             this.manageOrdersToolStripMenuItem.Name = "manageOrdersToolStripMenuItem";
-            this.manageOrdersToolStripMenuItem.Size = new System.Drawing.Size(222, 41);
+            this.manageOrdersToolStripMenuItem.Size = new System.Drawing.Size(337, 65);
             this.manageOrdersToolStripMenuItem.Text = "Manage Orders";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(124, 41);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 65);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // frmMainMnu
@@ -84,7 +84,7 @@
             this.ClientSize = new System.Drawing.Size(1867, 1004);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmMainMnu";
             this.Text = "Main Menu";
             this.menuStrip1.ResumeLayout(false);
