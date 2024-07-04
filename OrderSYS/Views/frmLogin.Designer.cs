@@ -53,7 +53,7 @@
             this.txtPassword.Location = new System.Drawing.Point(79, 415);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(7);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(823, 69);
+            this.txtPassword.Size = new System.Drawing.Size(828, 69);
             this.txtPassword.TabIndex = 1;
             // 
             // btnLogin
@@ -73,6 +73,7 @@
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(0)))));
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(79, 665);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(7);
             this.btnRegister.Name = "btnRegister";
@@ -87,7 +88,7 @@
             this.txtAccountID.Location = new System.Drawing.Point(79, 241);
             this.txtAccountID.Margin = new System.Windows.Forms.Padding(7);
             this.txtAccountID.Name = "txtAccountID";
-            this.txtAccountID.Size = new System.Drawing.Size(823, 69);
+            this.txtAccountID.Size = new System.Drawing.Size(225, 69);
             this.txtAccountID.TabIndex = 4;
             // 
             // lblAccountID

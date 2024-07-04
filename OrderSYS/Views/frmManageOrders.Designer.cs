@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDispatch = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.grdOrders = new System.Windows.Forms.DataGridView();
-            this.menuStrip2.SuspendLayout();
+            this.mnuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip2
+            // mnuMain
             // 
-            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(36, 36);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1867, 65);
-            this.menuStrip2.TabIndex = 3;
-            this.menuStrip2.Text = "menuStrip2";
+            this.mnuMain.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuMain.ImageScalingSize = new System.Drawing.Size(36, 36);
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnExit});
+            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            this.mnuMain.Name = "mnuMain";
+            this.mnuMain.Size = new System.Drawing.Size(1867, 65);
+            this.mnuMain.TabIndex = 3;
+            this.mnuMain.Text = "menuStrip2";
             // 
-            // exitToolStripMenuItem
+            // btnExit
             // 
-            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(111, 61);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.btnExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(111, 61);
+            this.btnExit.Text = "Exit";
             // 
             // btnCancel
             // 
@@ -90,6 +90,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(0)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(1275, 90);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(231, 62);
@@ -97,13 +98,13 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(13, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1256, 62);
-            this.textBox1.TabIndex = 10;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(13, 90);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(1256, 62);
+            this.txtSearch.TabIndex = 10;
             // 
             // grdOrders
             // 
@@ -123,14 +124,14 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDispatch);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grdOrders);
-            this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.mnuMain);
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmManageOrders";
             this.Text = "Manage Orders";
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,12 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuMain;
+        private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDispatch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView grdOrders;
     }
 }

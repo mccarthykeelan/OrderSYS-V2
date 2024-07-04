@@ -87,6 +87,8 @@
     <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Presenters\AuthenticationPresenter.cs" />
+    <Compile Include="Presenters\Interfaces\IAuthenticationPresenter.cs" />
     <Compile Include="Repository\AccountRepository.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
@@ -152,6 +154,12 @@
     <Compile Include="Views\frmRegisterProduct.Designer.cs">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmUpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmUpdateAccount.Designer.cs">
+      <DependentUpon>frmUpdateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmUpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +208,9 @@
     <EmbeddedResource Include="Views\frmRegisterProduct.resx">
       <DependentUpon>frmRegisterProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmUpdateAccount.resx">
+      <DependentUpon>frmUpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,8 +237,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentors\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

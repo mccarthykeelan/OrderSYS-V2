@@ -32,8 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.grpMonthlyRevenueAnalysis = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.cboYear = new System.Windows.Forms.ComboBox();
             this.lblYear = new System.Windows.Forms.Label();
             this.crtYearlyRevenueAnalysis = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grpMonthlyRevenueAnalysis.SuspendLayout();
@@ -42,8 +42,8 @@
             // 
             // grpMonthlyRevenueAnalysis
             // 
-            this.grpMonthlyRevenueAnalysis.Controls.Add(this.button1);
-            this.grpMonthlyRevenueAnalysis.Controls.Add(this.comboBox1);
+            this.grpMonthlyRevenueAnalysis.Controls.Add(this.btnGenerate);
+            this.grpMonthlyRevenueAnalysis.Controls.Add(this.cboYear);
             this.grpMonthlyRevenueAnalysis.Controls.Add(this.lblYear);
             this.grpMonthlyRevenueAnalysis.Controls.Add(this.crtYearlyRevenueAnalysis);
             this.grpMonthlyRevenueAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -54,27 +54,27 @@
             this.grpMonthlyRevenueAnalysis.TabStop = false;
             this.grpMonthlyRevenueAnalysis.Text = "Monthly Revenue Analysis";
             // 
-            // button1
+            // btnGenerate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(114)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 765);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1217, 112);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Generate Analysis";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(114)))));
+            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.ForeColor = System.Drawing.Color.White;
+            this.btnGenerate.Location = new System.Drawing.Point(28, 765);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(1217, 112);
+            this.btnGenerate.TabIndex = 3;
+            this.btnGenerate.Text = "Generate Analysis";
+            this.btnGenerate.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cboYear
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(163, 686);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 63);
-            this.comboBox1.TabIndex = 2;
+            this.cboYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboYear.FormattingEnabled = true;
+            this.cboYear.Location = new System.Drawing.Point(163, 686);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(292, 63);
+            this.cboYear.TabIndex = 2;
             // 
             // lblYear
             // 
@@ -120,9 +120,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpMonthlyRevenueAnalysis;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboYear;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.DataVisualization.Charting.Chart crtYearlyRevenueAnalysis;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerate;
     }
 }

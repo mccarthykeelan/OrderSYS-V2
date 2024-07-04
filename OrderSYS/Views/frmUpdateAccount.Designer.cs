@@ -1,6 +1,6 @@
 ﻿namespace OrderSYS.Views
 {
-    partial class frmRegisterAccount
+    partial class frmUpdateAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpRegister = new System.Windows.Forms.GroupBox();
+            this.mnuExit = new System.Windows.Forms.MenuStrip();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grdUpdate = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
@@ -55,47 +57,65 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grpRegister.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.mnuExit.SuspendLayout();
+            this.grdUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grpRegister
+            // mnuExit
             // 
-            this.grpRegister.Controls.Add(this.txtPassword);
-            this.grpRegister.Controls.Add(this.lblPassword);
-            this.grpRegister.Controls.Add(this.txtEircode);
-            this.grpRegister.Controls.Add(this.lblEircode);
-            this.grpRegister.Controls.Add(this.cboCounty);
-            this.grpRegister.Controls.Add(this.lblCounty);
-            this.grpRegister.Controls.Add(this.txtCity);
-            this.grpRegister.Controls.Add(this.lblCity);
-            this.grpRegister.Controls.Add(this.txtAddress2);
-            this.grpRegister.Controls.Add(this.lblAddress2);
-            this.grpRegister.Controls.Add(this.txtAddress1);
-            this.grpRegister.Controls.Add(this.lblAddress1);
-            this.grpRegister.Controls.Add(this.txtEmail);
-            this.grpRegister.Controls.Add(this.lblEmail);
-            this.grpRegister.Controls.Add(this.lblAccountID);
-            this.grpRegister.Controls.Add(this.txtAccountID);
-            this.grpRegister.Controls.Add(this.txtPhone);
-            this.grpRegister.Controls.Add(this.lblPhone);
-            this.grpRegister.Controls.Add(this.txtSurname);
-            this.grpRegister.Controls.Add(this.lblSurname);
-            this.grpRegister.Controls.Add(this.txtInitial);
-            this.grpRegister.Controls.Add(this.txtTitle);
-            this.grpRegister.Controls.Add(this.lblFirstInitital);
-            this.grpRegister.Controls.Add(this.lblTitle);
-            this.grpRegister.Controls.Add(this.btnCancel);
-            this.grpRegister.Controls.Add(this.btnConfirm);
-            this.grpRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRegister.Location = new System.Drawing.Point(12, 68);
-            this.grpRegister.Name = "grpRegister";
-            this.grpRegister.Size = new System.Drawing.Size(863, 1995);
-            this.grpRegister.TabIndex = 29;
-            this.grpRegister.TabStop = false;
-            this.grpRegister.Text = "Register Account";
+            this.mnuExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuExit.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuExit.ImageScalingSize = new System.Drawing.Size(36, 36);
+            this.mnuExit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.mnuExit.Location = new System.Drawing.Point(0, 0);
+            this.mnuExit.Name = "mnuExit";
+            this.mnuExit.Size = new System.Drawing.Size(894, 65);
+            this.mnuExit.TabIndex = 32;
+            this.mnuExit.Text = "menuStrip1";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(111, 61);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // grdUpdate
+            // 
+            this.grdUpdate.Controls.Add(this.txtPassword);
+            this.grdUpdate.Controls.Add(this.lblPassword);
+            this.grdUpdate.Controls.Add(this.txtEircode);
+            this.grdUpdate.Controls.Add(this.lblEircode);
+            this.grdUpdate.Controls.Add(this.cboCounty);
+            this.grdUpdate.Controls.Add(this.lblCounty);
+            this.grdUpdate.Controls.Add(this.txtCity);
+            this.grdUpdate.Controls.Add(this.lblCity);
+            this.grdUpdate.Controls.Add(this.txtAddress2);
+            this.grdUpdate.Controls.Add(this.lblAddress2);
+            this.grdUpdate.Controls.Add(this.txtAddress1);
+            this.grdUpdate.Controls.Add(this.lblAddress1);
+            this.grdUpdate.Controls.Add(this.txtEmail);
+            this.grdUpdate.Controls.Add(this.lblEmail);
+            this.grdUpdate.Controls.Add(this.lblAccountID);
+            this.grdUpdate.Controls.Add(this.txtAccountID);
+            this.grdUpdate.Controls.Add(this.txtPhone);
+            this.grdUpdate.Controls.Add(this.lblPhone);
+            this.grdUpdate.Controls.Add(this.txtSurname);
+            this.grdUpdate.Controls.Add(this.lblSurname);
+            this.grdUpdate.Controls.Add(this.txtInitial);
+            this.grdUpdate.Controls.Add(this.txtTitle);
+            this.grdUpdate.Controls.Add(this.lblFirstInitital);
+            this.grdUpdate.Controls.Add(this.lblTitle);
+            this.grdUpdate.Controls.Add(this.btnCancel);
+            this.grdUpdate.Controls.Add(this.btnConfirm);
+            this.grdUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdUpdate.Location = new System.Drawing.Point(21, 80);
+            this.grdUpdate.Name = "grdUpdate";
+            this.grdUpdate.Size = new System.Drawing.Size(863, 1995);
+            this.grdUpdate.TabIndex = 33;
+            this.grdUpdate.TabStop = false;
+            this.grdUpdate.Text = "Update Account";
             // 
             // txtPassword
             // 
@@ -398,52 +418,35 @@
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(828, 100);
             this.btnConfirm.TabIndex = 28;
-            this.btnConfirm.Text = "Register";
+            this.btnConfirm.Text = "Update";
             this.btnConfirm.UseVisualStyleBackColor = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(887, 65);
-            this.menuStrip1.TabIndex = 30;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(111, 61);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // frmRegisterAccount
+            // frmUpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(925, 1098);
-            this.Controls.Add(this.grpRegister);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(7);
-            this.Name = "frmRegisterAccount";
-            this.Text = "Register";
-            this.grpRegister.ResumeLayout(false);
-            this.grpRegister.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(932, 1098);
+            this.Controls.Add(this.grdUpdate);
+            this.Controls.Add(this.mnuExit);
+            this.Name = "frmUpdateAccount";
+            this.Text = "Update Account";
+            this.mnuExit.ResumeLayout(false);
+            this.mnuExit.PerformLayout();
+            this.grdUpdate.ResumeLayout(false);
+            this.grdUpdate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grpRegister;
+
+        private System.Windows.Forms.MenuStrip mnuExit;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.GroupBox grdUpdate;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.Label lblEircode;
         private System.Windows.Forms.ComboBox cboCounty;
@@ -468,9 +471,5 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
