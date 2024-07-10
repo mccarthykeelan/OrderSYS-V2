@@ -9,7 +9,7 @@ namespace OrderSYS.Repository
 {
     public interface IAccountRepository
     {
-        void Login(AccountModel account);
+        bool Login(int accountId, string password);
         void Register(AccountModel account);
         void Update(AccountModel account);
         void Delete(AccountModel account);

@@ -1,18 +1,11 @@
-﻿using OrderSYS.Interfaces;
-using OrderSYS.Models;
+﻿using OrderSYS.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderSYS.Views
 {
-    public partial class frmOrder : Form, IOrder
+    public partial class frmOrder : Form
     {
         public frmOrder()
         {

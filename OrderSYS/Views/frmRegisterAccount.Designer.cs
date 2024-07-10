@@ -44,7 +44,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAccountID = new System.Windows.Forms.Label();
-            this.txtAccountID = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.lblFirstInitital = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpRegister.SuspendLayout();
@@ -78,7 +78,7 @@
             this.grpRegister.Controls.Add(this.txtEmail);
             this.grpRegister.Controls.Add(this.lblEmail);
             this.grpRegister.Controls.Add(this.lblAccountID);
-            this.grpRegister.Controls.Add(this.txtAccountID);
+            this.grpRegister.Controls.Add(this.txtID);
             this.grpRegister.Controls.Add(this.txtPhone);
             this.grpRegister.Controls.Add(this.lblPhone);
             this.grpRegister.Controls.Add(this.txtSurname);
@@ -88,7 +88,7 @@
             this.grpRegister.Controls.Add(this.lblFirstInitital);
             this.grpRegister.Controls.Add(this.lblTitle);
             this.grpRegister.Controls.Add(this.btnCancel);
-            this.grpRegister.Controls.Add(this.btnConfirm);
+            this.grpRegister.Controls.Add(this.btnRegister);
             this.grpRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpRegister.Location = new System.Drawing.Point(12, 68);
             this.grpRegister.Name = "grpRegister";
@@ -281,17 +281,17 @@
             this.lblAccountID.TabIndex = 39;
             this.lblAccountID.Text = "Account ID";
             // 
-            // txtAccountID
+            // txtID
             // 
-            this.txtAccountID.BackColor = System.Drawing.Color.Black;
-            this.txtAccountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccountID.ForeColor = System.Drawing.Color.White;
-            this.txtAccountID.Location = new System.Drawing.Point(405, 51);
-            this.txtAccountID.Margin = new System.Windows.Forms.Padding(7);
-            this.txtAccountID.Name = "txtAccountID";
-            this.txtAccountID.ReadOnly = true;
-            this.txtAccountID.Size = new System.Drawing.Size(217, 69);
-            this.txtAccountID.TabIndex = 38;
+            this.txtID.BackColor = System.Drawing.Color.Black;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.Location = new System.Drawing.Point(405, 51);
+            this.txtID.Margin = new System.Windows.Forms.Padding(7);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(217, 69);
+            this.txtID.TabIndex = 38;
             // 
             // txtPhone
             // 
@@ -387,19 +387,19 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // btnConfirm
+            // btnRegister
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(114)))));
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(14, 1765);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(7);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(828, 100);
-            this.btnConfirm.TabIndex = 28;
-            this.btnConfirm.Text = "Register";
-            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(114)))));
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(14, 1765);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(7);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(828, 100);
+            this.btnRegister.TabIndex = 28;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 
@@ -457,7 +457,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblAccountID;
-        private System.Windows.Forms.TextBox txtAccountID;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtSurname;
@@ -467,7 +467,7 @@
         private System.Windows.Forms.Label lblFirstInitital;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.MenuStrip menuStrip1;
