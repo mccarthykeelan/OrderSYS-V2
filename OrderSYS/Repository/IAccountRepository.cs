@@ -9,8 +9,8 @@ namespace OrderSYS.Repository
 {
     public interface IAccountRepository
     {
-        bool Login(int accountId, string password);
-        void Register(AccountModel account);
+        bool Login(int id, string password);
+        bool Register(AccountModel account);
         void Update(AccountModel account);
         void Delete(AccountModel account);
         void Approve(AccountModel account);

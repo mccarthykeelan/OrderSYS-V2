@@ -1,4 +1,5 @@
-﻿using OrderSYS.Repository;
+﻿using OrderSYS.Models;
+using OrderSYS.Repository;
 using OrderSYS.Views;
 using System;
 using System.Collections.Generic;
@@ -64,21 +65,22 @@ namespace OrderSYS.Presenters
             // Example of handling the registration submission
             // You would implement the actual registration logic here using the repository
             // For example:
-            int accountId = registerForm.Id;
-            string title = registerForm.Title;
-            string firstInitial = registerForm.FirstInitial;
-            string surname = registerForm.Surname;
-            string phone = registerForm.Phone;
-            string email = registerForm.Email;
-            string address1 = registerForm.Address1;
-            string address2 = registerForm.Address2;
-            string city = registerForm.City;
-            string county = registerForm.County;
-            string eircode = registerForm.Eircode;
-            string password = registerForm.Password;
+            AccountModel account = new AccountModel();
+            account.Id = registerForm.Id;
+            account.Title = registerForm.Title;
+            account.FirstInitial = registerForm.FirstInitial;
+            account.Surname = registerForm.Surname;
+            account.Phone = registerForm.Phone;
+            account.Email = registerForm.Email;
+            account.Address1 = registerForm.Address1;
+            account.Address2 = registerForm.Address2;
+            account.City = registerForm.City;
+            account.County = registerForm.County;
+            account.Eircode = registerForm.Eircode;
+            account.Password = registerForm.Password;
 
             // Assuming you have a method in AccountRepository to handle registration
-            bool registrationSuccessful = accountRepository.Register(accountId, title, firstInitial, surname, phone, email, address1, address2, city, county, eircode, password);
+            bool registrationSuccessful = accountRepository.Register(account);
 
             // Update the view based on the result
             registerForm.IsSuccessful = registrationSuccessful;
