@@ -5,7 +5,7 @@ namespace OrderSYS.Views.Interfaces
     /// <summary>
     /// Interface for the login view, extending authentication-related operations.
     /// </summary>
-    public interface ILoginView : IAuthenticationInterface
+    public interface ILoginView
     {
         /// <summary>
         /// Gets or sets the ID associated with the login operation.

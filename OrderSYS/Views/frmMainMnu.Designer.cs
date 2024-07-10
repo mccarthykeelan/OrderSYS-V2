@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManageAccounts = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManageProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManageOrders = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGenerateStatement = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRevenueAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,40 +45,62 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUsersToolStripMenuItem,
-            this.manageProductsToolStripMenuItem,
-            this.manageOrdersToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.btnManageAccounts,
+            this.btnManageProducts,
+            this.btnManageOrders,
+            this.btnLogout,
+            this.adminToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1867, 69);
+            this.menuStrip1.Size = new System.Drawing.Size(1867, 65);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // manageUsersToolStripMenuItem
+            // btnManageAccounts
             // 
-            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(380, 65);
-            this.manageUsersToolStripMenuItem.Text = "Manage Accounts";
+            this.btnManageAccounts.Name = "btnManageAccounts";
+            this.btnManageAccounts.Size = new System.Drawing.Size(380, 61);
+            this.btnManageAccounts.Text = "Manage Accounts";
             // 
-            // manageProductsToolStripMenuItem
+            // btnManageProducts
             // 
-            this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
-            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(374, 65);
-            this.manageProductsToolStripMenuItem.Text = "Manage Products";
+            this.btnManageProducts.Name = "btnManageProducts";
+            this.btnManageProducts.Size = new System.Drawing.Size(374, 61);
+            this.btnManageProducts.Text = "Manage Products";
             // 
-            // manageOrdersToolStripMenuItem
+            // btnManageOrders
             // 
-            this.manageOrdersToolStripMenuItem.Name = "manageOrdersToolStripMenuItem";
-            this.manageOrdersToolStripMenuItem.Size = new System.Drawing.Size(337, 65);
-            this.manageOrdersToolStripMenuItem.Text = "Manage Orders";
+            this.btnManageOrders.Name = "btnManageOrders";
+            this.btnManageOrders.Size = new System.Drawing.Size(337, 61);
+            this.btnManageOrders.Text = "Manage Orders";
             // 
-            // logoutToolStripMenuItem
+            // btnLogout
             // 
-            this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 65);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.btnLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(180, 61);
+            this.btnLogout.Text = "Logout";
+            // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnGenerateStatement,
+            this.btnRevenueAnalysis});
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(169, 61);
+            this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // btnGenerateStatement
+            // 
+            this.btnGenerateStatement.Name = "btnGenerateStatement";
+            this.btnGenerateStatement.Size = new System.Drawing.Size(552, 66);
+            this.btnGenerateStatement.Text = "Generate Statement";
+            // 
+            // btnRevenueAnalysis
+            // 
+            this.btnRevenueAnalysis.Name = "btnRevenueAnalysis";
+            this.btnRevenueAnalysis.Size = new System.Drawing.Size(552, 66);
+            this.btnRevenueAnalysis.Text = "Revenue Analysis";
             // 
             // frmMainMnu
             // 
@@ -97,9 +122,12 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageProductsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageOrdersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnManageAccounts;
+        private System.Windows.Forms.ToolStripMenuItem btnManageProducts;
+        private System.Windows.Forms.ToolStripMenuItem btnManageOrders;
+        private System.Windows.Forms.ToolStripMenuItem btnLogout;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnGenerateStatement;
+        private System.Windows.Forms.ToolStripMenuItem btnRevenueAnalysis;
     }
 }

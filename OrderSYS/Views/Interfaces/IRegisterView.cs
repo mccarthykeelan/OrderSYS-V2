@@ -5,7 +5,7 @@ namespace OrderSYS.Views.Interfaces
     /// <summary>
     /// Interface for the registration view, extending authentication-related operations.
     /// </summary>
-    public interface IRegisterView : IAuthenticationInterface
+    public interface IRegisterView
     {
         /// <summary>
         /// Gets or sets the ID associated with the registration.

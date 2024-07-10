@@ -9,6 +9,12 @@ namespace OrderSYS.Repository
 {
     public class ProductRepository : IProductRepository
     {
+        private string _sqlConnectionString;
+        public ProductRepository(string sqlConnectionString)
+        {
+            _sqlConnectionString = sqlConnectionString;
+        }
+
         public void Add(ProductModel product)
         {
             throw new NotImplementedException();

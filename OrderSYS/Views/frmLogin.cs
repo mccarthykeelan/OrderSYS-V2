@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace OrderSYS.Views
 {
-    public partial class frmLogin : Form, ILoginView
+    public partial class frmLogin : Form, IAuthenticationInterface, ILoginView
     {
         public frmLogin()
         {
