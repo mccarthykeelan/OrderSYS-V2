@@ -2,10 +2,6 @@
 using OrderSYS.Repository;
 using OrderSYS.Views;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderSYS.Presenters
 {
@@ -14,6 +10,9 @@ namespace OrderSYS.Presenters
         private readonly frmLogin loginForm;
         private readonly frmRegisterAccount registerForm;
         private readonly AccountRepository accountRepository;
+
+        // Event to signal successful authentication
+        public event EventHandler<AccountModel> AuthenticationSuccessful;
 
         public AuthenticationPresenter(frmLogin loginForm, frmRegisterAccount registerForm, AccountRepository accountRepository)
         {
@@ -34,7 +33,7 @@ namespace OrderSYS.Presenters
 
         private void RegisterForm_CancelEvent(object sender, EventArgs e)
         {
-            registerForm.Close();
+            registerForm.Hide();
             loginForm.Show();
         }
 
@@ -43,50 +42,50 @@ namespace OrderSYS.Presenters
             int accountId = loginForm.Id;
             string password = loginForm.Password;
 
-            // Example of using the repository to perform login logic
             bool loginSuccessful = accountRepository.Login(accountId, password);
-
-            // Update the view based on the result
             loginForm.IsSuccessful = loginSuccessful;
             loginForm.Message = loginSuccessful ? "Login successful." : "Invalid credentials.";
 
-            // You can add more logic here based on the result, e.g., navigating to another view
+            if (loginSuccessful)
+            {
+                var authenticatedUser = accountRepository.GetAccountById(accountId);
+                AuthenticationSuccessful?.Invoke(this, authenticatedUser);
+            }
         }
 
         private void LoginForm_RegisterEvent(object sender, EventArgs e)
         {
-            // Example of handling the registration event
-            loginForm.Hide(); // Hide the login form
-            registerForm.Show(); // Show the registration form
+            loginForm.Hide();
+            registerForm.Show();
         }
 
         private void RegisterForm_RegisterEvent(object sender, EventArgs e)
         {
-            // Example of handling the registration submission
-            // You would implement the actual registration logic here using the repository
-            // For example:
-            AccountModel account = new AccountModel();
-            account.Id = registerForm.Id;
-            account.Title = registerForm.Title;
-            account.FirstInitial = registerForm.FirstInitial;
-            account.Surname = registerForm.Surname;
-            account.Phone = registerForm.Phone;
-            account.Email = registerForm.Email;
-            account.Address1 = registerForm.Address1;
-            account.Address2 = registerForm.Address2;
-            account.City = registerForm.City;
-            account.County = registerForm.County;
-            account.Eircode = registerForm.Eircode;
-            account.Password = registerForm.Password;
+            AccountModel account = new AccountModel
+            {
+                Id = registerForm.Id,
+                Title = registerForm.Title,
+                FirstInitial = registerForm.FirstInitial,
+                Surname = registerForm.Surname,
+                Phone = registerForm.Phone,
+                Email = registerForm.Email,
+                Address1 = registerForm.Address1,
+                Address2 = registerForm.Address2,
+                City = registerForm.City,
+                County = registerForm.County,
+                Eircode = registerForm.Eircode,
+                Password = registerForm.Password
+            };
 
-            // Assuming you have a method in AccountRepository to handle registration
             bool registrationSuccessful = accountRepository.Register(account);
-
-            // Update the view based on the result
             registerForm.IsSuccessful = registrationSuccessful;
             registerForm.Message = registrationSuccessful ? "Registration successful." : "Registration failed.";
 
-            // You can add more logic here based on the result, e.g., navigating to another view
+            if (registrationSuccessful)
+            {
+                registerForm.Hide();
+                loginForm.Show();
+            }
         }
     }
 }

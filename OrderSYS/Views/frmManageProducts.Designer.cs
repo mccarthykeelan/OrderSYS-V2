@@ -153,7 +153,6 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmManageProducts";
             this.Text = "Manage Products";
-            this.Load += new System.EventHandler(this.frmManageProducts_Load);
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).EndInit();

@@ -1,11 +1,8 @@
-﻿
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace OrderSYS.Models
 {
-
-
     public class AccountModel
     {
         [DisplayName("Account ID")]
@@ -56,5 +53,13 @@ namespace OrderSYS.Models
         [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [DisplayName("Account Type")]
+        [Required(ErrorMessage = "Account Type is required")]
+        public string Type { get; set; } 
+
+        [DisplayName("Account Status")]
+        [Required(ErrorMessage = "Account Status is required")]
+        public string Status { get; set; }
     }
 }

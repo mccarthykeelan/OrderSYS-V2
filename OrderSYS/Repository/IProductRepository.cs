@@ -11,9 +11,10 @@ namespace OrderSYS.Repository
     {
         void Add(ProductModel product);
         void Update(ProductModel product);
-        void Delete(ProductModel product);
+        void Discontinue(ProductModel product);
         ProductModel GetById(int productId);
         IEnumerable<ProductModel> GetAll();
+        IEnumerable<ProductModel> GetAvailable();
         IEnumerable<ProductModel> SearchByName(string productName);
     }
 }

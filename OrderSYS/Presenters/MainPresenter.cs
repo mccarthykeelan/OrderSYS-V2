@@ -13,47 +13,65 @@ namespace OrderSYS.Presenters
 
         public MainPresenter(frmMainMnu mainView, string sqlConnectionString, AccountModel authenticatedUser)
         {
-            _mainView = mainView;
-            _sqlConnectionString = sqlConnectionString;
-            _authenticatedUser = authenticatedUser;
+            _mainView = mainView ?? throw new ArgumentNullException(nameof(mainView));
+            _sqlConnectionString = sqlConnectionString ?? throw new ArgumentNullException(nameof(sqlConnectionString));
+            _authenticatedUser = authenticatedUser ?? throw new ArgumentNullException(nameof(authenticatedUser));
 
             AssociateAndRaiseViewEvents();
         }
 
-        public void AssociateAndRaiseViewEvents()
+        private void AssociateAndRaiseViewEvents()
         {
-            // Example event handlers for menu items or buttons
             _mainView.ManageOrdersEvent += (sender, e) => ManageOrders();
             _mainView.ManageProductsEvent += (sender, e) => ManageProducts();
             _mainView.ManageAccountsEvent += (sender, e) => ManageAccounts();
         }
 
-        public void ManageOrders()
+        private void ManageOrders()
         {
-            // var orderRepository = new OrderRepository(_sqlConnectionString);
-            // var orders = orderRepository.GetOrders();
-            // _mainView.DisplayOrders(orders);
+            try
+            {
+                // var orderRepository = new OrderRepository(_sqlConnectionString);
+                // var orders = orderRepository.GetOrders();
+                // _mainView.DisplayOrders(orders);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error managing orders: {ex.Message}");
+            }
         }
 
-        public void ManageProducts()
+        private void ManageProducts()
         {
-            ProductRepository productRepository = new ProductRepository(_sqlConnectionString);
-            frmManageProducts manageProducts = new frmManageProducts();
+            try
+            {
+                var productRepository = new ProductRepository(_sqlConnectionString);
+                var manageProducts = new frmManageProducts();
 
-            // Instantiate ManageProductsPresenter and inject dependencies
-            ManageProductsPresenter _manageProductsPresenter = new ManageProductsPresenter(manageProducts, productRepository);
+                var manageProductsPresenter = new ManageProductsPresenter(manageProducts, productRepository);
 
-            // Show the manage products form
-            manageProducts.Show();
+                // Show the manage products form
+                manageProducts.Show();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error managing products: {ex.Message}");
+            }
         }
 
-        public void ManageAccounts()
+        private void ManageAccounts()
         {
-            // Implement logic for managing accounts
-            // Example:
-            // var accountRepository = new AccountRepository(_sqlConnectionString);
-            // var accounts = accountRepository.GetAccounts();
-            // _mainView.DisplayAccounts(accounts);
+            try
+            {
+                // var accountRepository = new AccountRepository(_sqlConnectionString);
+                // var accounts = accountRepository.GetAccounts();
+                // _mainView.DisplayAccounts(accounts);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (log it and/or display an error message to the user)
+                Console.WriteLine($"Error managing accounts: {ex.Message}");
+            }
         }
     }
 }

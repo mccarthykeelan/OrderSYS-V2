@@ -171,6 +171,7 @@
     <Compile Include="Views\frmMonthlyRevenueAnalysis.Designer.cs">
       <DependentUpon>frmMonthlyRevenueAnalysis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Interfaces\IProductView.cs" />
     <Compile Include="Views\Interfaces\IAuthenticationInterface.cs" />
     <Compile Include="Views\Interfaces\ILoginView.cs" />
     <Compile Include="Views\Interfaces\IMainView.cs" />

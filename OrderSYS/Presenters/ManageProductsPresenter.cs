@@ -1,20 +1,24 @@
-﻿using OrderSYS.Repository;
+﻿using OrderSYS.Models;
+using OrderSYS.Repository;
 using OrderSYS.Views;
 using OrderSYS.Views.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace OrderSYS.Presenters
 {
     public class ManageProductsPresenter
     {
-        private readonly frmManageProducts _view;
-        private readonly ProductRepository _productRepository;
+        private readonly IManageProductsView _view;
+        private readonly IProductRepository _productRepository;
 
-        public ManageProductsPresenter(frmManageProducts view, ProductRepository productRepository)
+        public ManageProductsPresenter(IManageProductsView view, IProductRepository productRepository)
         {
             _view = view;
             _productRepository = productRepository;
 
             AssociateAndRaiseViewEvents();
+            LoadProducts();
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -22,49 +26,80 @@ namespace OrderSYS.Presenters
             _view.AddProduct += (sender, e) => AddProduct();
             _view.UpdateProduct += (sender, e) => UpdateProduct();
             _view.DeleteProduct += (sender, e) => DeleteProduct();
+            _view.LoadProducts += (sender, e) => LoadProducts();
         }
 
         private void LoadProducts()
         {
-            //List<Product> products = _productRepository.GetProducts();
-            //_view.DisplayProducts(products);
+            try
+            {
+                IEnumerable<ProductModel> products = _productRepository.GetAll();
+                _view.DisplayProducts(products);
+            }
+            catch (Exception ex)
+            {
+                _view.ShowErrorMessage("An error occurred while loading products: " + ex.Message);
+            }
         }
 
         private void AddProduct()
         {
-            /*// Example: Retrieve data from view and save to repository
-            Product newProduct = new Product
+            try
             {
-                Name = _view.NewProductName,
-                Price = _view.NewProductPrice
-                // Add other properties as needed
-            };
+                var newProduct = _view.GetProductDetailsFromInput();
+                if (newProduct == null)
+                {
+                    _view.ShowErrorMessage("Invalid product details.");
+                    return;
+                }
 
-            _productRepository.AddProduct(newProduct);
-            LoadProducts(); // Reload products after adding*/
+                _productRepository.Add(newProduct);
+                LoadProducts();
+            }
+            catch (Exception ex)
+            {
+                _view.ShowErrorMessage("An error occurred while adding the product: " + ex.Message);
+            }
         }
 
         private void UpdateProduct()
         {
-            /*// Example: Retrieve data from view and update in repository
-            Product updatedProduct = new Product
+            try
             {
-                Id = _view.SelectedProductId,
-                Name = _view.SelectedProductName,
-                Price = _view.SelectedProductPrice
-                // Add other properties as needed
-            };
+                var updatedProduct = _view.GetProductDetailsFromInput();
+                if (updatedProduct == null)
+                {
+                    _view.ShowErrorMessage("Invalid product details.");
+                    return;
+                }
 
-            _productRepository.UpdateProduct(updatedProduct);
-            LoadProducts(); // Reload products after updating*/
+                _productRepository.Update(updatedProduct);
+                LoadProducts();
+            }
+            catch (Exception ex)
+            {
+                _view.ShowErrorMessage("An error occurred while updating the product: " + ex.Message);
+            }
         }
 
         private void DeleteProduct()
         {
-/*            // Example: Retrieve selected product ID from view and delete from repository
-            int productIdToDelete = _view.SelectedProductId;
-            _productRepository.DeleteProduct(productIdToDelete);
-            LoadProducts(); // Reload products after deleting*/
+            try
+            {
+                ProductModel product = _view.GetSelectedProduct();
+                if (product.Id == 0)
+                {
+                    _view.ShowErrorMessage("No product selected.");
+                    return;
+                }
+
+                _productRepository.Discontinue(product);
+                LoadProducts();
+            }
+            catch (Exception ex)
+            {
+                _view.ShowErrorMessage("An error occurred while deleting the product: " + ex.Message);
+            }
         }
     }
 }

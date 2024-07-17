@@ -34,7 +34,7 @@ namespace OrderSYS.Views
         public event EventHandler LogoutEvent;
 
         // Method to associate and raise view events
-        public void AssociateAndRaiseViewEvents()
+        public void AssoicateAndRaiseViewEvents()
         {
             btnManageOrders.Click += (sender, e) => ManageOrdersEvent?.Invoke(this, EventArgs.Empty);
             btnManageProducts.Click += (sender, e) => ManageProductsEvent?.Invoke(this, EventArgs.Empty);

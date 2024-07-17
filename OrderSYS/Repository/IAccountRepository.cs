@@ -1,9 +1,5 @@
 ﻿using OrderSYS.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderSYS.Repository
 {
@@ -18,7 +14,7 @@ namespace OrderSYS.Repository
         void Block(AccountModel account);
         void Unlock(AccountModel account);
         IEnumerable<AccountModel> GetAll();
-        IEnumerable<ProductModel> SearchBy(string productName);
-    }
 
+        AccountModel GetAccountById(int id); // New method declaration
+    }
 }

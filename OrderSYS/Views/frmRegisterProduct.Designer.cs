@@ -31,24 +31,26 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpRegister = new System.Windows.Forms.GroupBox();
-            this.txtAddress1 = new System.Windows.Forms.TextBox();
             this.lblAddress1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAccountID = new System.Windows.Forms.Label();
             this.txtAccountID = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.txtFirstInitial = new System.Windows.Forms.TextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.lblFirstInitital = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.nudStock = new System.Windows.Forms.NumericUpDown();
+            this.nudPrice = new System.Windows.Forms.NumericUpDown();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.grpRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,18 +75,18 @@
             // 
             // grpRegister
             // 
-            this.grpRegister.Controls.Add(this.txtAddress1);
+            this.grpRegister.Controls.Add(this.cboCategory);
+            this.grpRegister.Controls.Add(this.nudPrice);
+            this.grpRegister.Controls.Add(this.nudStock);
             this.grpRegister.Controls.Add(this.lblAddress1);
-            this.grpRegister.Controls.Add(this.txtEmail);
             this.grpRegister.Controls.Add(this.lblEmail);
             this.grpRegister.Controls.Add(this.lblAccountID);
             this.grpRegister.Controls.Add(this.txtAccountID);
-            this.grpRegister.Controls.Add(this.txtPhone);
             this.grpRegister.Controls.Add(this.lblPhone);
-            this.grpRegister.Controls.Add(this.txtSurname);
+            this.grpRegister.Controls.Add(this.txtDescription);
             this.grpRegister.Controls.Add(this.lblSurname);
-            this.grpRegister.Controls.Add(this.txtFirstInitial);
-            this.grpRegister.Controls.Add(this.txtTitle);
+            this.grpRegister.Controls.Add(this.txtModel);
+            this.grpRegister.Controls.Add(this.txtBrand);
             this.grpRegister.Controls.Add(this.lblFirstInitital);
             this.grpRegister.Controls.Add(this.lblTitle);
             this.grpRegister.Controls.Add(this.btnCancel);
@@ -97,15 +99,6 @@
             this.grpRegister.TabStop = false;
             this.grpRegister.Text = "Register Product";
             // 
-            // txtAddress1
-            // 
-            this.txtAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress1.Location = new System.Drawing.Point(14, 939);
-            this.txtAddress1.Margin = new System.Windows.Forms.Padding(7);
-            this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(823, 69);
-            this.txtAddress1.TabIndex = 43;
-            // 
             // lblAddress1
             // 
             this.lblAddress1.AutoSize = true;
@@ -116,15 +109,6 @@
             this.lblAddress1.Size = new System.Drawing.Size(144, 55);
             this.lblAddress1.TabIndex = 42;
             this.lblAddress1.Text = "Stock";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(14, 795);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(7);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(823, 69);
-            this.txtEmail.TabIndex = 41;
             // 
             // lblEmail
             // 
@@ -160,15 +144,6 @@
             this.txtAccountID.Size = new System.Drawing.Size(217, 69);
             this.txtAccountID.TabIndex = 38;
             // 
-            // txtPhone
-            // 
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(14, 648);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(7);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(482, 69);
-            this.txtPhone.TabIndex = 37;
-            // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
@@ -180,14 +155,14 @@
             this.lblPhone.TabIndex = 36;
             this.lblPhone.Text = "Category";
             // 
-            // txtSurname
+            // txtDescription
             // 
-            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.Location = new System.Drawing.Point(14, 501);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(7);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(482, 69);
-            this.txtSurname.TabIndex = 35;
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(14, 501);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(7);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(482, 69);
+            this.txtDescription.TabIndex = 35;
             // 
             // lblSurname
             // 
@@ -200,23 +175,23 @@
             this.lblSurname.TabIndex = 34;
             this.lblSurname.Text = "Description";
             // 
-            // txtFirstInitial
+            // txtModel
             // 
-            this.txtFirstInitial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstInitial.Location = new System.Drawing.Point(14, 354);
-            this.txtFirstInitial.Margin = new System.Windows.Forms.Padding(7);
-            this.txtFirstInitial.Name = "txtFirstInitial";
-            this.txtFirstInitial.Size = new System.Drawing.Size(244, 69);
-            this.txtFirstInitial.TabIndex = 33;
+            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModel.Location = new System.Drawing.Point(14, 354);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(7);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(244, 69);
+            this.txtModel.TabIndex = 33;
             // 
-            // txtTitle
+            // txtBrand
             // 
-            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(14, 208);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(7);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(210, 69);
-            this.txtTitle.TabIndex = 32;
+            this.txtBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrand.Location = new System.Drawing.Point(14, 208);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(7);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(210, 69);
+            this.txtBrand.TabIndex = 32;
             // 
             // lblFirstInitital
             // 
@@ -268,6 +243,31 @@
             this.btnConfirm.Text = "Register";
             this.btnConfirm.UseVisualStyleBackColor = false;
             // 
+            // nudStock
+            // 
+            this.nudStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudStock.Location = new System.Drawing.Point(14, 944);
+            this.nudStock.Name = "nudStock";
+            this.nudStock.Size = new System.Drawing.Size(254, 69);
+            this.nudStock.TabIndex = 43;
+            // 
+            // nudPrice
+            // 
+            this.nudPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPrice.Location = new System.Drawing.Point(14, 791);
+            this.nudPrice.Name = "nudPrice";
+            this.nudPrice.Size = new System.Drawing.Size(254, 69);
+            this.nudPrice.TabIndex = 44;
+            // 
+            // cboCategory
+            // 
+            this.cboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(14, 644);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(480, 71);
+            this.cboCategory.TabIndex = 45;
+            // 
             // frmRegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -282,6 +282,8 @@
             this.menuStrip1.PerformLayout();
             this.grpRegister.ResumeLayout(false);
             this.grpRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,21 +294,21 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.GroupBox grpRegister;
-        private System.Windows.Forms.TextBox txtAddress1;
         private System.Windows.Forms.Label lblAddress1;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblAccountID;
         private System.Windows.Forms.TextBox txtAccountID;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txtFirstInitial;
-        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label lblFirstInitital;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.NumericUpDown nudPrice;
+        private System.Windows.Forms.NumericUpDown nudStock;
+        private System.Windows.Forms.ComboBox cboCategory;
     }
 }
