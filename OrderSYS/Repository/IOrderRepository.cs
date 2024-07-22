@@ -9,11 +9,11 @@ namespace OrderSYS.Repository
 {
     public interface IOrderRepository
     {
-        void Add(OrderModel order);
-        void Update(OrderModel order);
-        void Discontinue(OrderModel order);
-        OrderModel GetById(int orderId);
-        IEnumerable<OrderModel> GetAll();
-        IEnumerable<ProductModel> SearchBy(string productName);
+        void Add(Order order);
+        void Update(Order order);
+        void Discontinue(Order order);
+        Order GetById(int orderId);
+        IEnumerable<Order> GetAll();
+        IEnumerable<Product> SearchBy(string productName);
     }
 }

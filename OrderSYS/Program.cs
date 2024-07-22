@@ -28,7 +28,7 @@ namespace OrderSYS
             Application.Run(loginForm);
         }
 
-        private static void OnAuthenticationSuccessful(object sender, AccountModel authenticatedUser)
+        private static void OnAuthenticationSuccessful(object sender, Account authenticatedUser)
         {
             frmMainMnu mainForm = new frmMainMnu();
             MainPresenter mainPresenter = new MainPresenter(mainForm, "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=c##ordersys;Password=123123;", authenticatedUser);

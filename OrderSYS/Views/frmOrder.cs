@@ -17,6 +17,6 @@ namespace OrderSYS.Views
         public string Status { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public decimal Total { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int AccountId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IEnumerable<ProductModel> Products { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IEnumerable<Product> Products { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

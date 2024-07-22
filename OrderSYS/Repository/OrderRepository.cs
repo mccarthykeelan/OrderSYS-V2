@@ -9,32 +9,32 @@ namespace OrderSYS.Repository
 {
     public class OrderRepository : IOrderRepository
     {
-        public void Add(OrderModel order)
+        public void Add(Order order)
         {
             throw new NotImplementedException();
         }
 
-        public void Discontinue(OrderModel order)
+        public void Discontinue(Order order)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<OrderModel> GetAll()
+        public IEnumerable<Order> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public OrderModel GetById(int orderId)
+        public Order GetById(int orderId)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProductModel> SearchBy(string productName)
+        public IEnumerable<Product> SearchBy(string productName)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(OrderModel order)
+        public void Update(Order order)
         {
             throw new NotImplementedException();
         }

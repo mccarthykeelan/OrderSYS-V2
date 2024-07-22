@@ -109,6 +109,7 @@
             this.grdUpdate.Controls.Add(this.lblTitle);
             this.grdUpdate.Controls.Add(this.btnCancel);
             this.grdUpdate.Controls.Add(this.btnConfirm);
+            this.grdUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grdUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdUpdate.Location = new System.Drawing.Point(21, 80);
             this.grdUpdate.Name = "grdUpdate";
@@ -123,12 +124,14 @@
             this.txtPassword.Location = new System.Drawing.Point(14, 1673);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(7);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(823, 69);
+            this.txtPassword.Size = new System.Drawing.Size(482, 69);
             this.txtPassword.TabIndex = 53;
+            this.txtPassword.Text = "123123";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblPassword.Location = new System.Drawing.Point(3, 1614);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -145,10 +148,12 @@
             this.txtEircode.Name = "txtEircode";
             this.txtEircode.Size = new System.Drawing.Size(482, 69);
             this.txtEircode.TabIndex = 51;
+            this.txtEircode.Text = "V92PD35";
             // 
             // lblEircode
             // 
             this.lblEircode.AutoSize = true;
+            this.lblEircode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEircode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblEircode.Location = new System.Drawing.Point(4, 1459);
             this.lblEircode.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -159,6 +164,7 @@
             // 
             // cboCounty
             // 
+            this.cboCounty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCounty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCounty.FormattingEnabled = true;
             this.cboCounty.Items.AddRange(new object[] {
@@ -202,6 +208,7 @@
             // lblCounty
             // 
             this.lblCounty.AutoSize = true;
+            this.lblCounty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCounty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblCounty.Location = new System.Drawing.Point(4, 1319);
             this.lblCounty.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -218,10 +225,12 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(482, 69);
             this.txtCity.TabIndex = 47;
+            this.txtCity.Text = "Tralee";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
+            this.lblCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblCity.Location = new System.Drawing.Point(4, 1170);
             this.lblCity.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -238,10 +247,12 @@
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(823, 69);
             this.txtAddress2.TabIndex = 45;
+            this.txtAddress2.Text = "Oakfield Court";
             // 
             // lblAddress2
             // 
             this.lblAddress2.AutoSize = true;
+            this.lblAddress2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAddress2.Location = new System.Drawing.Point(4, 1021);
             this.lblAddress2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -258,10 +269,12 @@
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(823, 69);
             this.txtAddress1.TabIndex = 43;
+            this.txtAddress1.Text = "Apartment 18";
             // 
             // lblAddress1
             // 
             this.lblAddress1.AutoSize = true;
+            this.lblAddress1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAddress1.Location = new System.Drawing.Point(4, 877);
             this.lblAddress1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -278,10 +291,12 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(823, 69);
             this.txtEmail.TabIndex = 41;
+            this.txtEmail.Text = "mccarthykeelan@gmail.com";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblEmail.Location = new System.Drawing.Point(4, 733);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -293,6 +308,7 @@
             // lblAccountID
             // 
             this.lblAccountID.AutoSize = true;
+            this.lblAccountID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAccountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAccountID.Location = new System.Drawing.Point(132, 61);
             this.lblAccountID.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -321,10 +337,12 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(482, 69);
             this.txtPhone.TabIndex = 37;
+            this.txtPhone.Text = "0873884688";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblPhone.Location = new System.Drawing.Point(4, 586);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -341,10 +359,12 @@
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(482, 69);
             this.txtSurname.TabIndex = 35;
+            this.txtSurname.Text = "McCarthy";
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
+            this.lblSurname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblSurname.Location = new System.Drawing.Point(4, 439);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -361,6 +381,7 @@
             this.txtInitial.Name = "txtInitial";
             this.txtInitial.Size = new System.Drawing.Size(244, 69);
             this.txtInitial.TabIndex = 33;
+            this.txtInitial.Text = "K";
             // 
             // txtTitle
             // 
@@ -370,10 +391,12 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(246, 69);
             this.txtTitle.TabIndex = 32;
+            this.txtTitle.Text = "Mr";
             // 
             // lblFirstInitital
             // 
             this.lblFirstInitital.AutoSize = true;
+            this.lblFirstInitital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFirstInitital.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblFirstInitital.Location = new System.Drawing.Point(4, 292);
             this.lblFirstInitital.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -385,6 +408,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblTitle.Location = new System.Drawing.Point(4, 146);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);

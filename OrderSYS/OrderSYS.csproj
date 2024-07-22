@@ -87,11 +87,12 @@
   <ItemGroup>
     <Compile Include="Presenters\AuthenticationPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\ManageOrdersPresenter.cs" />
     <Compile Include="Presenters\ManageProductsPresenter.cs" />
     <Compile Include="Repository\AccountRepository.cs" />
-    <Compile Include="Models\AccountModel.cs" />
-    <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IAccountRepository.cs" />
@@ -171,6 +172,7 @@
     <Compile Include="Views\frmMonthlyRevenueAnalysis.Designer.cs">
       <DependentUpon>frmMonthlyRevenueAnalysis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Interfaces\IManageOrderView.cs" />
     <Compile Include="Views\Interfaces\IProductView.cs" />
     <Compile Include="Views\Interfaces\IAuthenticationInterface.cs" />
     <Compile Include="Views\Interfaces\ILoginView.cs" />

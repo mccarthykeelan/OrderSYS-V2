@@ -9,6 +9,7 @@ namespace OrderSYS.Views
         public frmRegisterAccount()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
         public int Id

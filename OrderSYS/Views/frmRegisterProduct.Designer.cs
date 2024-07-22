@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuExit = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpRegister = new System.Windows.Forms.GroupBox();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.nudPrice = new System.Windows.Forms.NumericUpDown();
+            this.nudStock = new System.Windows.Forms.NumericUpDown();
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAccountID = new System.Windows.Forms.Label();
@@ -44,27 +47,24 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.nudStock = new System.Windows.Forms.NumericUpDown();
-            this.nudPrice = new System.Windows.Forms.NumericUpDown();
-            this.cboCategory = new System.Windows.Forms.ComboBox();
-            this.menuStrip1.SuspendLayout();
+            this.mnuExit.SuspendLayout();
             this.grpRegister.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mnuExit
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuExit.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuExit.ImageScalingSize = new System.Drawing.Size(36, 36);
+            this.mnuExit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 65);
-            this.menuStrip1.TabIndex = 31;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuExit.Location = new System.Drawing.Point(0, 0);
+            this.mnuExit.Name = "mnuExit";
+            this.mnuExit.Size = new System.Drawing.Size(884, 65);
+            this.mnuExit.TabIndex = 31;
+            this.mnuExit.Text = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
@@ -91,39 +91,72 @@
             this.grpRegister.Controls.Add(this.lblTitle);
             this.grpRegister.Controls.Add(this.btnCancel);
             this.grpRegister.Controls.Add(this.btnConfirm);
+            this.grpRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpRegister.Location = new System.Drawing.Point(12, 81);
             this.grpRegister.Name = "grpRegister";
-            this.grpRegister.Size = new System.Drawing.Size(857, 1266);
+            this.grpRegister.Size = new System.Drawing.Size(857, 1269);
             this.grpRegister.TabIndex = 32;
             this.grpRegister.TabStop = false;
             this.grpRegister.Text = "Register Product";
             // 
+            // cboCategory
+            // 
+            this.cboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(14, 644);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(480, 71);
+            this.cboCategory.TabIndex = 7;
+            // 
+            // nudPrice
+            // 
+            this.nudPrice.DecimalPlaces = 2;
+            this.nudPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPrice.Location = new System.Drawing.Point(14, 791);
+            this.nudPrice.Name = "nudPrice";
+            this.nudPrice.Size = new System.Drawing.Size(254, 69);
+            this.nudPrice.TabIndex = 9;
+            this.nudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // nudStock
+            // 
+            this.nudStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudStock.Location = new System.Drawing.Point(14, 944);
+            this.nudStock.Name = "nudStock";
+            this.nudStock.Size = new System.Drawing.Size(254, 69);
+            this.nudStock.TabIndex = 11;
+            this.nudStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblAddress1
             // 
             this.lblAddress1.AutoSize = true;
+            this.lblAddress1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAddress1.Location = new System.Drawing.Point(4, 877);
             this.lblAddress1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAddress1.Name = "lblAddress1";
             this.lblAddress1.Size = new System.Drawing.Size(144, 55);
-            this.lblAddress1.TabIndex = 42;
+            this.lblAddress1.TabIndex = 10;
             this.lblAddress1.Text = "Stock";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblEmail.Location = new System.Drawing.Point(4, 733);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(133, 55);
-            this.lblEmail.TabIndex = 40;
+            this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Price";
             // 
             // lblAccountID
             // 
             this.lblAccountID.AutoSize = true;
+            this.lblAccountID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAccountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblAccountID.Location = new System.Drawing.Point(132, 61);
             this.lblAccountID.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
@@ -147,12 +180,13 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblPhone.Location = new System.Drawing.Point(4, 586);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(220, 55);
-            this.lblPhone.TabIndex = 36;
+            this.lblPhone.TabIndex = 6;
             this.lblPhone.Text = "Category";
             // 
             // txtDescription
@@ -162,17 +196,18 @@
             this.txtDescription.Margin = new System.Windows.Forms.Padding(7);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(482, 69);
-            this.txtDescription.TabIndex = 35;
+            this.txtDescription.TabIndex = 5;
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
+            this.lblSurname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblSurname.Location = new System.Drawing.Point(4, 439);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(264, 55);
-            this.lblSurname.TabIndex = 34;
+            this.lblSurname.TabIndex = 4;
             this.lblSurname.Text = "Description";
             // 
             // txtModel
@@ -182,7 +217,7 @@
             this.txtModel.Margin = new System.Windows.Forms.Padding(7);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(244, 69);
-            this.txtModel.TabIndex = 33;
+            this.txtModel.TabIndex = 3;
             // 
             // txtBrand
             // 
@@ -191,28 +226,30 @@
             this.txtBrand.Margin = new System.Windows.Forms.Padding(7);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(210, 69);
-            this.txtBrand.TabIndex = 32;
+            this.txtBrand.TabIndex = 1;
             // 
             // lblFirstInitital
             // 
             this.lblFirstInitital.AutoSize = true;
+            this.lblFirstInitital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFirstInitital.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblFirstInitital.Location = new System.Drawing.Point(4, 292);
             this.lblFirstInitital.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblFirstInitital.Name = "lblFirstInitital";
             this.lblFirstInitital.Size = new System.Drawing.Size(155, 55);
-            this.lblFirstInitital.TabIndex = 31;
+            this.lblFirstInitital.TabIndex = 2;
             this.lblFirstInitital.Text = "Model";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lblTitle.Location = new System.Drawing.Point(4, 146);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 55);
-            this.lblTitle.TabIndex = 30;
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Brand";
             // 
             // btnCancel
@@ -225,7 +262,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(7);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(823, 100);
-            this.btnCancel.TabIndex = 29;
+            this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
@@ -239,34 +276,9 @@
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(7);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(823, 100);
-            this.btnConfirm.TabIndex = 28;
+            this.btnConfirm.TabIndex = 12;
             this.btnConfirm.Text = "Register";
             this.btnConfirm.UseVisualStyleBackColor = false;
-            // 
-            // nudStock
-            // 
-            this.nudStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudStock.Location = new System.Drawing.Point(14, 944);
-            this.nudStock.Name = "nudStock";
-            this.nudStock.Size = new System.Drawing.Size(254, 69);
-            this.nudStock.TabIndex = 43;
-            // 
-            // nudPrice
-            // 
-            this.nudPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPrice.Location = new System.Drawing.Point(14, 791);
-            this.nudPrice.Name = "nudPrice";
-            this.nudPrice.Size = new System.Drawing.Size(254, 69);
-            this.nudPrice.TabIndex = 44;
-            // 
-            // cboCategory
-            // 
-            this.cboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(14, 644);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(480, 71);
-            this.cboCategory.TabIndex = 45;
             // 
             // frmRegisterProduct
             // 
@@ -275,15 +287,15 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(922, 1098);
             this.Controls.Add(this.grpRegister);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mnuExit);
             this.Name = "frmRegisterProduct";
             this.Text = "Register Product";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnuExit.ResumeLayout(false);
+            this.mnuExit.PerformLayout();
             this.grpRegister.ResumeLayout(false);
             this.grpRegister.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +303,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mnuExit;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.GroupBox grpRegister;
         private System.Windows.Forms.Label lblAddress1;

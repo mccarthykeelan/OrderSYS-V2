@@ -12,7 +12,7 @@ namespace OrderSYS.Presenters
         private readonly AccountRepository accountRepository;
 
         // Event to signal successful authentication
-        public event EventHandler<AccountModel> AuthenticationSuccessful;
+        public event EventHandler<Account> AuthenticationSuccessful;
 
         public AuthenticationPresenter(frmLogin loginForm, frmRegisterAccount registerForm, AccountRepository accountRepository)
         {
@@ -61,7 +61,7 @@ namespace OrderSYS.Presenters
 
         private void RegisterForm_RegisterEvent(object sender, EventArgs e)
         {
-            AccountModel account = new AccountModel
+            Account account = new Account
             {
                 Id = registerForm.Id,
                 Title = registerForm.Title,

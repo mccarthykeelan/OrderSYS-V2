@@ -12,7 +12,7 @@ namespace OrderSYS.Views.Interfaces
         /// <summary>
         /// Property to hold information about the authenticated account.
         /// </summary>
-        AccountModel AuthenticatedAccount { get; set; }
+        Account AuthenticatedAccount { get; set; }
 
         /// <summary>
         /// Event raised when the user selects to manage orders.

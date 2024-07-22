@@ -9,6 +9,7 @@ namespace OrderSYS.Views
         public frmRegisterProduct()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
         public int Id { get; set; }
@@ -52,6 +53,10 @@ namespace OrderSYS.Views
         }
 
         public event EventHandler SaveProduct;
+
+        public void AssociateAndRaiseViewEvents()
+        {
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {

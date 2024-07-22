@@ -6,15 +6,15 @@ namespace OrderSYS.Repository
     public interface IAccountRepository
     {
         bool Login(int id, string password);
-        bool Register(AccountModel account);
-        void Update(AccountModel account);
-        void Delete(AccountModel account);
-        void Approve(AccountModel account);
-        void Close(AccountModel account);
-        void Block(AccountModel account);
-        void Unlock(AccountModel account);
-        IEnumerable<AccountModel> GetAll();
+        bool Register(Account account);
+        void Update(Account account);
+        void Delete(Account account);
+        void Approve(Account account);
+        void Close(Account account);
+        void Block(Account account);
+        void Unlock(Account account);
+        IEnumerable<Account> GetAll();
 
-        AccountModel GetAccountById(int id); // New method declaration
+        Account GetAccountById(int id);
     }
 }

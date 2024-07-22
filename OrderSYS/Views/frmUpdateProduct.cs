@@ -9,6 +9,7 @@ namespace OrderSYS.Views
         public frmUpdateProduct()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
         public int Id { get; set; } // Id can be set externally
@@ -51,11 +52,25 @@ namespace OrderSYS.Views
 
         public string Category
         {
-            get => txtCategory.Text;
-            set => txtCategory.Text = value;
+            get => cboCategory.SelectedItem?.ToString() ?? string.Empty;
+            set
+            {
+                if (cboCategory.Items.Contains(value))
+                {
+                    cboCategory.SelectedItem = value;
+                }
+                else
+                {
+                    cboCategory.SelectedIndex = -1;
+                }
+            }
         }
 
         public event EventHandler SaveProduct;
+
+        public void AssociateAndRaiseViewEvents()
+        {
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {

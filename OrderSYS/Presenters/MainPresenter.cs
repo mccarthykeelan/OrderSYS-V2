@@ -9,9 +9,9 @@ namespace OrderSYS.Presenters
     {
         private readonly frmMainMnu _mainView;
         private readonly string _sqlConnectionString;
-        private readonly AccountModel _authenticatedUser;
+        private readonly Account _authenticatedUser;
 
-        public MainPresenter(frmMainMnu mainView, string sqlConnectionString, AccountModel authenticatedUser)
+        public MainPresenter(frmMainMnu mainView, string sqlConnectionString, Account authenticatedUser)
         {
             _mainView = mainView ?? throw new ArgumentNullException(nameof(mainView));
             _sqlConnectionString = sqlConnectionString ?? throw new ArgumentNullException(nameof(sqlConnectionString));

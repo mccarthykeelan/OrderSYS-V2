@@ -30,15 +30,10 @@ namespace OrderSYS.Views.Interfaces
         event EventHandler DeleteProduct;
 
         /// <summary>
-        /// Method to associate and raise view events.
-        /// </summary>
-        void AssociateAndRaiseViewEvents();
-
-        /// <summary>
         /// Displays a list of products in the view.
         /// </summary>
         /// <param name="products">The list of products to display.</param>
-        void DisplayProducts(IEnumerable<ProductModel> products);
+        void DisplayProducts(IEnumerable<Product> products);
 
         /// <summary>
         /// Displays an error message in the view.
@@ -50,12 +45,17 @@ namespace OrderSYS.Views.Interfaces
         /// Retrieves details of the selected product from the view.
         /// </summary>
         /// <returns>The selected product details as a ProductModel object.</returns>
-        ProductModel GetSelectedProduct();
+        Product GetSelectedProduct();
 
         /// <summary>
         /// Retrieves details of a new or updated product from input fields in the view.
         /// </summary>
         /// <returns>The product details entered by the user as a ProductModel object.</returns>
-        ProductModel GetProductDetailsFromInput();
+        Product GetProductDetailsFromInput();
+
+        /// <summary>
+        /// Method to associate and raise view events.
+        /// </summary>
+        void AssociateAndRaiseViewEvents();
     }
 }

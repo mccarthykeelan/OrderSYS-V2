@@ -14,7 +14,7 @@ namespace OrderSYS.Repository
             this.connectionString = connectionString;
         }
 
-        public bool Register(AccountModel account)
+        public bool Register(Account account)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -57,7 +57,7 @@ namespace OrderSYS.Repository
             }
         }
 
-        public void Update(AccountModel account)
+        public void Update(Account account)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -86,7 +86,7 @@ namespace OrderSYS.Repository
             }
         }
 
-        public void Delete(AccountModel account)
+        public void Delete(Account account)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -99,9 +99,9 @@ namespace OrderSYS.Repository
             }
         }
 
-        public IEnumerable<AccountModel> GetAll()
+        public IEnumerable<Account> GetAll()
         {
-            List<AccountModel> accounts = new List<AccountModel>();
+            List<Account> accounts = new List<Account>();
 
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -113,7 +113,7 @@ namespace OrderSYS.Repository
 
                 while (reader.Read())
                 {
-                    AccountModel account = new AccountModel
+                    Account account = new Account
                     {
                         Id = Convert.ToInt32(reader["ACCOUNT_ID"]),
                         Title = reader["TITLE"].ToString(),
@@ -140,7 +140,7 @@ namespace OrderSYS.Repository
             return accounts;
         }
 
-        public AccountModel GetAccountById(int id)
+        public Account GetAccountById(int id)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -153,7 +153,7 @@ namespace OrderSYS.Repository
 
                 if (reader.Read())
                 {
-                    AccountModel account = new AccountModel
+                    Account account = new Account
                     {
                         Id = Convert.ToInt32(reader["ACCOUNT_ID"]),
                         Title = reader["TITLE"].ToString(),
@@ -182,9 +182,9 @@ namespace OrderSYS.Repository
             }
         }
 
-        public IEnumerable<AccountModel> SearchBy(string searchCriteria)
+        public IEnumerable<Account> SearchBy(string searchCriteria)
         {
-            List<AccountModel> accounts = new List<AccountModel>();
+            List<Account> accounts = new List<Account>();
 
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
@@ -199,7 +199,7 @@ namespace OrderSYS.Repository
 
                 while (reader.Read())
                 {
-                    AccountModel account = new AccountModel
+                    Account account = new Account
                     {
                         Id = Convert.ToInt32(reader["ACCOUNT_ID"]),
                         Title = reader["TITLE"].ToString(),
@@ -226,27 +226,27 @@ namespace OrderSYS.Repository
             return accounts;
         }
 
-        public void Approve(AccountModel account)
+        public void Approve(Account account)
         {
-            // Implement approval logic here if needed
+            // Implement approval logic here
             throw new NotImplementedException();
         }
 
-        public void Block(AccountModel account)
+        public void Block(Account account)
         {
-            // Implement blocking logic here if needed
+            // Implement blocking logic here
             throw new NotImplementedException();
         }
 
-        public void Close(AccountModel account)
+        public void Close(Account account)
         {
-            // Implement closing logic here if needed
+            // Implement closing logic here
             throw new NotImplementedException();
         }
 
-        public void Unlock(AccountModel account)
+        public void Unlock(Account account)
         {
-            // Implement unlocking logic here if needed
+            // Implement unlocking logic here
             throw new NotImplementedException();
         }
     }

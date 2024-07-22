@@ -9,12 +9,12 @@ namespace OrderSYS.Repository
 {
     public interface IProductRepository
     {
-        void Add(ProductModel product);
-        void Update(ProductModel product);
-        void Discontinue(ProductModel product);
-        ProductModel GetById(int productId);
-        IEnumerable<ProductModel> GetAll();
-        IEnumerable<ProductModel> GetAvailable();
-        IEnumerable<ProductModel> SearchByName(string productName);
+        void Add(Product product);
+        void Update(Product product);
+        void Discontinue(Product product);
+        Product GetById(int productId);
+        IEnumerable<Product> GetAll();
+        IEnumerable<Product> GetAvailable();
+        IEnumerable<Product> SearchByName(string productName);
     }
 }

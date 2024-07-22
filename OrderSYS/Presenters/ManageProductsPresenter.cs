@@ -33,7 +33,7 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                IEnumerable<ProductModel> products = _productRepository.GetAll();
+                IEnumerable<Product> products = _productRepository.GetAll();
                 _view.DisplayProducts(products);
             }
             catch (Exception ex)
@@ -86,7 +86,7 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                ProductModel product = _view.GetSelectedProduct();
+                Product product = _view.GetSelectedProduct();
                 if (product.Id == 0)
                 {
                     _view.ShowErrorMessage("No product selected.");

@@ -14,7 +14,7 @@ namespace OrderSYS.Repository
             _sqlConnectionString = sqlConnectionString;
         }
 
-        public void Add(ProductModel product)
+        public void Add(Product product)
         {
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {
@@ -39,7 +39,7 @@ namespace OrderSYS.Repository
             }
         }
 
-        public void Discontinue(ProductModel product)
+        public void Discontinue(Product product)
         {
             Discontinue(product.Id);
         }
@@ -61,9 +61,9 @@ namespace OrderSYS.Repository
             }
         }
 
-        public IEnumerable<ProductModel> GetAll()
+        public IEnumerable<Product> GetAll()
         {
-            List<ProductModel> products = new List<ProductModel>();
+            List<Product> products = new List<Product>();
 
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {
@@ -74,7 +74,7 @@ namespace OrderSYS.Repository
                 OracleDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ProductModel product = new ProductModel
+                    Product product = new Product
                     {
                         Id = Convert.ToInt32(reader["PRODUCT_ID"]),
                         Brand = reader["BRAND"].ToString(),
@@ -92,9 +92,9 @@ namespace OrderSYS.Repository
             return products;
         }
 
-        public IEnumerable<ProductModel> GetAvailable()
+        public IEnumerable<Product> GetAvailable()
         {
-            List<ProductModel> products = new List<ProductModel>();
+            List<Product> products = new List<Product>();
 
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {
@@ -105,7 +105,7 @@ namespace OrderSYS.Repository
                 OracleDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ProductModel product = new ProductModel
+                    Product product = new Product
                     {
                         Id = Convert.ToInt32(reader["PRODUCT_ID"]),
                         Brand = reader["BRAND"].ToString(),
@@ -123,7 +123,7 @@ namespace OrderSYS.Repository
             return products;
         }
 
-        public ProductModel GetById(int productId)
+        public Product GetById(int productId)
         {
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {
@@ -135,7 +135,7 @@ namespace OrderSYS.Repository
                 OracleDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    ProductModel product = new ProductModel
+                    Product product = new Product
                     {
                         Id = Convert.ToInt32(reader["PRODUCT_ID"]),
                         Brand = reader["BRAND"].ToString(),
@@ -155,9 +155,9 @@ namespace OrderSYS.Repository
             }
         }
 
-        public IEnumerable<ProductModel> SearchByName(string productName)
+        public IEnumerable<Product> SearchByName(string productName)
         {
-            List<ProductModel> products = new List<ProductModel>();
+            List<Product> products = new List<Product>();
 
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {
@@ -169,7 +169,7 @@ namespace OrderSYS.Repository
                 OracleDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    ProductModel product = new ProductModel
+                    Product product = new Product
                     {
                         Id = Convert.ToInt32(reader["PRODUCT_ID"]),
                         Brand = reader["BRAND"].ToString(),
@@ -187,7 +187,7 @@ namespace OrderSYS.Repository
             return products;
         }
 
-        public void Update(ProductModel product)
+        public void Update(Product product)
         {
             using (OracleConnection connection = new OracleConnection(_sqlConnectionString))
             {

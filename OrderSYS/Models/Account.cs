@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OrderSYS.Models
 {
-    public class AccountModel
+    public class Account
     {
         [DisplayName("Account ID")]
         [Required(ErrorMessage = "Account ID is required")]

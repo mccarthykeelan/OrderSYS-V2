@@ -9,20 +9,19 @@ namespace OrderSYS.Views
     public partial class frmMainMnu : Form, IMainView
     {
         // Field to store authenticated account information
-        private AccountModel _authenticatedAccount;
+        private Account _authenticatedAccount;
 
         public frmMainMnu()
         {
             InitializeComponent();
         }
 
-        public AccountModel AuthenticatedAccount
+        public Account AuthenticatedAccount
         {
             get { return _authenticatedAccount; }
             set
             {
                 _authenticatedAccount = value;
-                // Update UI to reflect authenticated account details if needed
             }
         }
 
@@ -33,7 +32,6 @@ namespace OrderSYS.Views
         public event EventHandler GenerateStatementEvent;
         public event EventHandler LogoutEvent;
 
-        // Method to associate and raise view events
         public void AssoicateAndRaiseViewEvents()
         {
             btnManageOrders.Click += (sender, e) => ManageOrdersEvent?.Invoke(this, EventArgs.Empty);

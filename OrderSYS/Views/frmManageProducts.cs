@@ -31,7 +31,6 @@ namespace OrderSYS.Views
         public event EventHandler DeleteProduct;
         public event EventHandler SaveProduct;
 
-        // IManageProductsView method to associate and raise events
         public void AssociateAndRaiseViewEvents()
         {
             btnRegister.Click += (sender, e) => AddProduct?.Invoke(sender, e);
@@ -40,8 +39,7 @@ namespace OrderSYS.Views
             Load += (sender, e) => LoadProducts?.Invoke(sender, e);
         }
 
-        // IManageProductsView methods
-        public void DisplayProducts(IEnumerable<ProductModel> products)
+        public void DisplayProducts(IEnumerable<Product> products)
         {
             grdProducts.DataSource = products;
         }
@@ -51,13 +49,12 @@ namespace OrderSYS.Views
             MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        // Get the selected product from the data grid view
-        public ProductModel GetSelectedProduct()
+        public Product GetSelectedProduct()
         {
             if (grdProducts.SelectedRows.Count > 0)
             {
                 var selectedRow = grdProducts.SelectedRows[0];
-                return new ProductModel
+                return new Product
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["Id"].Value),
                     Brand = selectedRow.Cells["Brand"].Value.ToString(),
@@ -72,10 +69,9 @@ namespace OrderSYS.Views
             return null;
         }
 
-        // Get product details from input fields
-        public ProductModel GetProductDetailsFromInput()
+        public Product GetProductDetailsFromInput()
         {
-            return new ProductModel
+            return new Product
             {
                 Id = Id,
                 Brand = Brand,
