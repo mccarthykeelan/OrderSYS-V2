@@ -31,7 +31,8 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                //var orderRepository = new OrderRepository(_sqlConnectionString);
+                var orderRepository = new OrderRepository(_sqlConnectionString);
+                var manageOrders = new frmManageOrders();
                 // var orders = orderRepository.GetOrders();
                 // _mainView.DisplayOrders(orders);
             }
@@ -64,7 +65,8 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                // var accountRepository = new AccountRepository(_sqlConnectionString);
+                var accountRepository = new AccountRepository(_sqlConnectionString);
+                var manageAccounts = new frmManageAccounts();
                 // var accounts = accountRepository.GetAccounts();
                 // _mainView.DisplayAccounts(accounts);
             }

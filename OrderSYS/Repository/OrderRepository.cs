@@ -9,6 +9,11 @@ namespace OrderSYS.Repository
 {
     public class OrderRepository : IOrderRepository
     {
+        private readonly string _sqlConnectionString;
+        public OrderRepository(string sqlConnectionString) {
+            _sqlConnectionString = sqlConnectionString;
+        }
+
         public void Add(Order order)
         {
             throw new NotImplementedException();
