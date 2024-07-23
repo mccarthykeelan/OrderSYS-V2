@@ -14,6 +14,7 @@ namespace OrderSYS.Views
         public frmMainMnu()
         {
             InitializeComponent();
+            AssoicateAndRaiseViewEvents();
         }
 
         public Account AuthenticatedAccount

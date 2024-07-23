@@ -31,6 +31,10 @@ namespace OrderSYS.Views
         public string Eircode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public string Type => throw new NotImplementedException();
+
+        public string Status => throw new NotImplementedException();
+
         public event EventHandler CancelEvent;
 
         public void AssociateAndRaiseViewEvents()

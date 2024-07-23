@@ -74,7 +74,9 @@ namespace OrderSYS.Presenters
                 City = registerForm.City,
                 County = registerForm.County,
                 Eircode = registerForm.Eircode,
-                Password = registerForm.Password
+                Password = registerForm.Password,
+                Type = registerForm.Type,
+                Status = registerForm.Status,
             };
 
             bool registrationSuccessful = accountRepository.Register(account);

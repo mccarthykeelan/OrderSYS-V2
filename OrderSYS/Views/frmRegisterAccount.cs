@@ -86,6 +86,8 @@ namespace OrderSYS.Views
 
         public bool IsSuccessful { get; set; }
         public string Message { get; set; }
+        public string Type { get => "Customer"; }
+        public string Status { get => "CURRENT"; }
 
         public event EventHandler CancelEvent;
         public event EventHandler RegisterEvent;

@@ -62,7 +62,7 @@
             this.exitToolStripMenuItem});
             this.mnuExit.Location = new System.Drawing.Point(0, 0);
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(884, 65);
+            this.mnuExit.Size = new System.Drawing.Size(884, 69);
             this.mnuExit.TabIndex = 31;
             this.mnuExit.Text = "menuStrip1";
             // 
@@ -105,6 +105,8 @@
             this.cboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Items.AddRange(new object[] {
+            "Electronics"});
             this.cboCategory.Location = new System.Drawing.Point(14, 644);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(480, 71);
@@ -115,19 +117,39 @@
             this.nudPrice.DecimalPlaces = 2;
             this.nudPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPrice.Location = new System.Drawing.Point(14, 791);
+            this.nudPrice.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudPrice.Name = "nudPrice";
             this.nudPrice.Size = new System.Drawing.Size(254, 69);
             this.nudPrice.TabIndex = 9;
             this.nudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPrice.Value = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
             // 
             // nudStock
             // 
             this.nudStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudStock.Location = new System.Drawing.Point(14, 944);
+            this.nudStock.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudStock.Name = "nudStock";
             this.nudStock.Size = new System.Drawing.Size(254, 69);
             this.nudStock.TabIndex = 11;
             this.nudStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudStock.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // lblAddress1
             // 
@@ -195,8 +217,9 @@
             this.txtDescription.Location = new System.Drawing.Point(14, 501);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(7);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(482, 69);
+            this.txtDescription.Size = new System.Drawing.Size(823, 69);
             this.txtDescription.TabIndex = 5;
+            this.txtDescription.Text = "Apple IPhone 15 (2024)";
             // 
             // lblSurname
             // 
@@ -216,8 +239,9 @@
             this.txtModel.Location = new System.Drawing.Point(14, 354);
             this.txtModel.Margin = new System.Windows.Forms.Padding(7);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(244, 69);
+            this.txtModel.Size = new System.Drawing.Size(480, 69);
             this.txtModel.TabIndex = 3;
+            this.txtModel.Text = "IPhone 15";
             // 
             // txtBrand
             // 
@@ -225,8 +249,9 @@
             this.txtBrand.Location = new System.Drawing.Point(14, 208);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(7);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(210, 69);
+            this.txtBrand.Size = new System.Drawing.Size(480, 69);
             this.txtBrand.TabIndex = 1;
+            this.txtBrand.Text = "Apple";
             // 
             // lblFirstInitital
             // 

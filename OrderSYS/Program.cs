@@ -13,7 +13,7 @@ namespace OrderSYS
         [STAThread]
         static void Main()
         {
-            string connectionString = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=c##ordersys;Password=123123;";
+            string connectionString = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=C##ORDADMIN;Password=123123;";
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -31,7 +31,7 @@ namespace OrderSYS
         private static void OnAuthenticationSuccessful(object sender, Account authenticatedUser)
         {
             frmMainMnu mainForm = new frmMainMnu();
-            MainPresenter mainPresenter = new MainPresenter(mainForm, "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=c##ordersys;Password=123123;", authenticatedUser);
+            MainPresenter mainPresenter = new MainPresenter(mainForm, "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User ID=C##ORDADMIN;Password=123123;", authenticatedUser);
 
             mainForm.FormClosed += (s, args) => Application.Exit();
 

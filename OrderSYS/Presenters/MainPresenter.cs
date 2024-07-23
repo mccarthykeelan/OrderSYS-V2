@@ -31,7 +31,7 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                // var orderRepository = new OrderRepository(_sqlConnectionString);
+                //var orderRepository = new OrderRepository(_sqlConnectionString);
                 // var orders = orderRepository.GetOrders();
                 // _mainView.DisplayOrders(orders);
             }
@@ -52,6 +52,7 @@ namespace OrderSYS.Presenters
 
                 // Show the manage products form
                 manageProducts.Show();
+                _mainView.Hide();
             }
             catch (Exception ex)
             {

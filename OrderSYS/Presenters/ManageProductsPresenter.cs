@@ -4,18 +4,19 @@ using OrderSYS.Views;
 using OrderSYS.Views.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace OrderSYS.Presenters
 {
     public class ManageProductsPresenter
     {
-        private readonly IManageProductsView _view;
+        private readonly frmManageProducts _view;
         private readonly IProductRepository _productRepository;
 
-        public ManageProductsPresenter(IManageProductsView view, IProductRepository productRepository)
+        public ManageProductsPresenter(frmManageProducts view, IProductRepository productRepository)
         {
             _view = view;
-            _productRepository = productRepository;
+            _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
 
             AssociateAndRaiseViewEvents();
             LoadProducts();
@@ -46,19 +47,14 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                var newProduct = _view.GetProductDetailsFromInput();
-                if (newProduct == null)
-                {
-                    _view.ShowErrorMessage("Invalid product details.");
-                    return;
-                }
-
-                _productRepository.Add(newProduct);
-                LoadProducts();
+                var registerProduct = new frmRegisterProduct();
+                // Show the manage products form
+                registerProduct.Show();
+                _view.Hide();
             }
             catch (Exception ex)
             {
-                _view.ShowErrorMessage("An error occurred while adding the product: " + ex.Message);
+                Console.WriteLine($"Error managing products: {ex.Message}");
             }
         }
 
@@ -66,40 +62,20 @@ namespace OrderSYS.Presenters
         {
             try
             {
-                var updatedProduct = _view.GetProductDetailsFromInput();
-                if (updatedProduct == null)
-                {
-                    _view.ShowErrorMessage("Invalid product details.");
-                    return;
-                }
-
-                _productRepository.Update(updatedProduct);
-                LoadProducts();
+                var updateProduct = new frmUpdateProduct();
+                // Show the manage products form
+                updateProduct.Show();
+                _view.Hide();
             }
             catch (Exception ex)
             {
-                _view.ShowErrorMessage("An error occurred while updating the product: " + ex.Message);
+                Console.WriteLine($"Error managing products: {ex.Message}");
             }
         }
 
         private void DeleteProduct()
         {
-            try
-            {
-                Product product = _view.GetSelectedProduct();
-                if (product.Id == 0)
-                {
-                    _view.ShowErrorMessage("No product selected.");
-                    return;
-                }
 
-                _productRepository.Discontinue(product);
-                LoadProducts();
-            }
-            catch (Exception ex)
-            {
-                _view.ShowErrorMessage("An error occurred while deleting the product: " + ex.Message);
-            }
         }
     }
 }

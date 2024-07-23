@@ -1,5 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using OrderSYS.Models;
+﻿using OrderSYS.Models;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 
@@ -18,8 +18,8 @@ namespace OrderSYS.Repository
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
-                string query = "INSERT INTO ACCOUNTS (ACCOUNT_ID, TITLE, FIRST_INITIAL, SURNAME, PHONE, EMAIL, ADDRESS1, ADDRESS2, CITY, COUNTY, EIRCODE, STATUS, TYPE, PASSWORD) " +
-                               "VALUES (:AccountId, :Title, :FirstInitial, :Surname, :Phone, :Email, :Address1, :Address2, :City, :County, :Eircode, :Status, :Type, :Password)";
+                string query = "INSERT INTO ACCOUNTS (ACCOUNT_ID, TITLE, FIRST_INITIAL, SURNAME, PHONE, EMAIL, ADDRESS_1, ADDRESS_2, CITY, COUNTY, EIRCODE, PASSWORD, TYPE, STATUS) " +
+                               "VALUES (:AccountId, :Title, :FirstInitial, :Surname, :Phone, :Email, :AddressLine1, :AddressLine2, :City, :County, :Eircode, :Password, :Type, :Status)";
                 OracleCommand command = new OracleCommand(query, connection);
                 command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
                 command.Parameters.Add(":Title", OracleDbType.Varchar2).Value = account.Title;
@@ -32,9 +32,9 @@ namespace OrderSYS.Repository
                 command.Parameters.Add(":City", OracleDbType.Varchar2).Value = account.City;
                 command.Parameters.Add(":County", OracleDbType.Varchar2).Value = account.County;
                 command.Parameters.Add(":Eircode", OracleDbType.Varchar2).Value = account.Eircode;
-                command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = account.Status;
-                command.Parameters.Add(":Type", OracleDbType.Varchar2).Value = account.Type;
                 command.Parameters.Add(":Password", OracleDbType.Varchar2).Value = account.Password;
+                command.Parameters.Add(":Type", OracleDbType.Varchar2).Value = account.Type;
+                command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = account.Status;
 
                 connection.Open();
                 int rowsAffected = command.ExecuteNonQuery();
@@ -62,8 +62,8 @@ namespace OrderSYS.Repository
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
                 string query = "UPDATE ACCOUNTS SET TITLE = :Title, FIRST_INITIAL = :FirstInitial, SURNAME = :Surname, " +
-                               "PHONE = :Phone, EMAIL = :Email, ADDRESS1 = :Address1, ADDRESS2 = :Address2, CITY = :City, " +
-                               "COUNTY = :County, EIRCODE = :Eircode, STATUS = :Status, TYPE = :Type, PASSWORD = :Password " +
+                               "PHONE = :Phone, EMAIL = :Email, ADDRESS1 = :AddressLine1, ADDRESS2 = :AddressLine2, CITY = :City, " +
+                               "COUNTY = :County, EIRCODE = :Eircode, PASSWORD = :Password, TYPE = :Type, STATUS = :Status " +
                                "WHERE ACCOUNT_ID = :AccountId";
                 OracleCommand command = new OracleCommand(query, connection);
                 command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
@@ -72,14 +72,14 @@ namespace OrderSYS.Repository
                 command.Parameters.Add(":Surname", OracleDbType.Varchar2).Value = account.Surname;
                 command.Parameters.Add(":Phone", OracleDbType.Varchar2).Value = account.Phone;
                 command.Parameters.Add(":Email", OracleDbType.Varchar2).Value = account.Email;
-                command.Parameters.Add(":Address1", OracleDbType.Varchar2).Value = account.Address1;
-                command.Parameters.Add(":Address2", OracleDbType.Varchar2).Value = account.Address2;
+                command.Parameters.Add(":AddressLine1", OracleDbType.Varchar2).Value = account.Address1;
+                command.Parameters.Add(":AddressLine2", OracleDbType.Varchar2).Value = account.Address2;
                 command.Parameters.Add(":City", OracleDbType.Varchar2).Value = account.City;
                 command.Parameters.Add(":County", OracleDbType.Varchar2).Value = account.County;
                 command.Parameters.Add(":Eircode", OracleDbType.Varchar2).Value = account.Eircode;
-                command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = account.Status;
-                command.Parameters.Add(":Type", OracleDbType.Varchar2).Value = account.Type;
                 command.Parameters.Add(":Password", OracleDbType.Varchar2).Value = account.Password;
+                command.Parameters.Add(":Type", OracleDbType.Varchar2).Value = account.Type;
+                command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = account.Status;
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -121,14 +121,14 @@ namespace OrderSYS.Repository
                         Surname = reader["SURNAME"].ToString(),
                         Phone = reader["PHONE"].ToString(),
                         Email = reader["EMAIL"].ToString(),
-                        Address1 = reader["ADDRESS1"].ToString(),
-                        Address2 = reader["ADDRESS2"].ToString(),
+                        Address1 = reader["ADDRESS_1"].ToString(),
+                        Address2 = reader["ADDRESS_2"].ToString(),
                         City = reader["CITY"].ToString(),
                         County = reader["COUNTY"].ToString(),
                         Eircode = reader["EIRCODE"].ToString(),
-                        Status = reader["STATUS"].ToString(),
+                        Password = reader["PASSWORD"].ToString(),
                         Type = reader["TYPE"].ToString(),
-                        Password = reader["PASSWORD"].ToString()
+                        Status = reader["STATUS"].ToString()
                     };
 
                     accounts.Add(account);
@@ -161,14 +161,14 @@ namespace OrderSYS.Repository
                         Surname = reader["SURNAME"].ToString(),
                         Phone = reader["PHONE"].ToString(),
                         Email = reader["EMAIL"].ToString(),
-                        Address1 = reader["ADDRESS1"].ToString(),
-                        Address2 = reader["ADDRESS2"].ToString(),
+                        Address1 = reader["ADDRESS_1"].ToString(),
+                        Address2 = reader["ADDRESS_2"].ToString(),
                         City = reader["CITY"].ToString(),
                         County = reader["COUNTY"].ToString(),
                         Eircode = reader["EIRCODE"].ToString(),
-                        Status = reader["STATUS"].ToString(),
+                        Password = reader["PASSWORD"].ToString(),
                         Type = reader["TYPE"].ToString(),
-                        Password = reader["PASSWORD"].ToString()
+                        Status = reader["STATUS"].ToString()
                     };
 
                     reader.Close();
@@ -207,14 +207,14 @@ namespace OrderSYS.Repository
                         Surname = reader["SURNAME"].ToString(),
                         Phone = reader["PHONE"].ToString(),
                         Email = reader["EMAIL"].ToString(),
-                        Address1 = reader["ADDRESS1"].ToString(),
-                        Address2 = reader["ADDRESS2"].ToString(),
+                        Address1 = reader["ADDRESS_1"].ToString(),
+                        Address2 = reader["ADDRESS_2"].ToString(),
                         City = reader["CITY"].ToString(),
                         County = reader["COUNTY"].ToString(),
                         Eircode = reader["EIRCODE"].ToString(),
-                        Status = reader["STATUS"].ToString(),
+                        Password = reader["PASSWORD"].ToString(),
                         Type = reader["TYPE"].ToString(),
-                        Password = reader["PASSWORD"].ToString()
+                        Status = reader["STATUS"].ToString()
                     };
 
                     accounts.Add(account);
@@ -228,26 +228,70 @@ namespace OrderSYS.Repository
 
         public void Approve(Account account)
         {
-            // Implement approval logic here
-            throw new NotImplementedException();
-        }
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                string query = "UPDATE ACCOUNTS SET STATUS = 'CURRENT' WHERE ACCOUNT_ID = :AccountId";
+                OracleCommand command = new OracleCommand(query, connection);
+                command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
 
-        public void Block(Account account)
-        {
-            // Implement blocking logic here
-            throw new NotImplementedException();
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected <= 0)
+                {
+                    throw new Exception("Failed to approve account.");
+                }
+            }
         }
 
         public void Close(Account account)
         {
-            // Implement closing logic here
-            throw new NotImplementedException();
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                string query = "UPDATE ACCOUNTS SET STATUS = 'CLOSED' WHERE ACCOUNT_ID = :AccountId";
+                OracleCommand command = new OracleCommand(query, connection);
+                command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected <= 0)
+                {
+                    throw new Exception("Failed to close account.");
+                }
+            }
+        }
+
+        public void Block(Account account)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                string query = "UPDATE ACCOUNTS SET STATUS = 'BLOCKED' WHERE ACCOUNT_ID = :AccountId";
+                OracleCommand command = new OracleCommand(query, connection);
+                command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected <= 0)
+                {
+                    throw new Exception("Failed to block account.");
+                }
+            }
         }
 
         public void Unlock(Account account)
         {
-            // Implement unlocking logic here
-            throw new NotImplementedException();
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                string query = "UPDATE ACCOUNTS SET STATUS = 'CURRENT' WHERE ACCOUNT_ID = :AccountId";
+                OracleCommand command = new OracleCommand(query, connection);
+                command.Parameters.Add(":AccountId", OracleDbType.Int32).Value = account.Id;
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected <= 0)
+                {
+                    throw new Exception("Failed to unlock account.");
+                }
+            }
         }
     }
 }

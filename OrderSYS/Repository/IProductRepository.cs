@@ -11,7 +11,7 @@ namespace OrderSYS.Repository
     {
         void Add(Product product);
         void Update(Product product);
-        void Discontinue(Product product);
+        void Discontinue(int productId);
         Product GetById(int productId);
         IEnumerable<Product> GetAll();
         IEnumerable<Product> GetAvailable();

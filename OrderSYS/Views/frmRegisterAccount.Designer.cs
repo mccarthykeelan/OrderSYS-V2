@@ -92,7 +92,7 @@
             this.grpRegister.Controls.Add(this.btnRegister);
             this.grpRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRegister.Location = new System.Drawing.Point(-7, 72);
+            this.grpRegister.Location = new System.Drawing.Point(-7, 78);
             this.grpRegister.Name = "grpRegister";
             this.grpRegister.Size = new System.Drawing.Size(863, 1998);
             this.grpRegister.TabIndex = 29;

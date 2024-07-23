@@ -104,6 +104,22 @@ namespace OrderSYS.Views.Interfaces
         string Password { get; set; }
 
         /// <summary>
+        /// Gets or sets the type of the account (e.g., Customer, Admin).
+        /// </summary>
+        /// <value>
+        /// A string representing the type of account being registered.
+        /// </value>
+        string Type { get;}
+
+        /// <summary>
+        /// Gets or sets the status of the account (e.g., Active, Inactive).
+        /// </summary>
+        /// <value>
+        /// A string representing the current status of the account.
+        /// </value>
+        string Status { get;}
+
+        /// <summary>
         /// Occurs when the user triggers a cancel action.
         /// </summary>
         event EventHandler CancelEvent;

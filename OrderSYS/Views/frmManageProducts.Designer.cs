@@ -59,7 +59,7 @@
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(1867, 65);
             this.mnuMain.TabIndex = 2;
-            this.mnuMain.Text = "menuStrip2";
+            this.mnuMain.Text = "mnuMain";
             // 
             // btnExit
             // 
@@ -102,7 +102,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(1274, 81);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(231, 62);
+            this.btnSearch.Size = new System.Drawing.Size(231, 79);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(12, 81);
+            this.txtSearch.Location = new System.Drawing.Point(12, 90);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(1256, 62);
             this.txtSearch.TabIndex = 15;
@@ -151,7 +151,9 @@
             this.Controls.Add(this.grdProducts);
             this.Controls.Add(this.mnuMain);
             this.Margin = new System.Windows.Forms.Padding(7);
+            this.MinimumSize = new System.Drawing.Size(1895, 1086);
             this.Name = "frmManageProducts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Products";
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();

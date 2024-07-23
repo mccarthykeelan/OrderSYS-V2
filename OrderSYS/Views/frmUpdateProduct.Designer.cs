@@ -56,6 +56,7 @@
             // mnuExit
             // 
             this.mnuExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuExit.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuExit.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.mnuExit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
@@ -93,7 +94,7 @@
             this.grpRegister.Controls.Add(this.btnConfirm);
             this.grpRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRegister.Location = new System.Drawing.Point(-22, 68);
+            this.grpRegister.Location = new System.Drawing.Point(16, 68);
             this.grpRegister.Name = "grpRegister";
             this.grpRegister.Size = new System.Drawing.Size(857, 1266);
             this.grpRegister.TabIndex = 33;

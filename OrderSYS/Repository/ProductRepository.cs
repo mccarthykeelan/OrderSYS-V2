@@ -25,7 +25,7 @@ namespace OrderSYS.Repository
                 command.Parameters.Add(":Brand", OracleDbType.Varchar2).Value = product.Brand;
                 command.Parameters.Add(":Model", OracleDbType.Varchar2).Value = product.Model;
                 command.Parameters.Add(":Description", OracleDbType.Varchar2).Value = product.Description;
-                command.Parameters.Add(":Price", OracleDbType.Decimal).Value = Convert.ToDecimal(product.Price);
+                command.Parameters.Add(":Price", OracleDbType.Decimal).Value = product.Price;
                 command.Parameters.Add(":Stock", OracleDbType.Int32).Value = product.Stock;
                 command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = product.Status;
                 command.Parameters.Add(":Category", OracleDbType.Varchar2).Value = product.Category;
@@ -199,7 +199,7 @@ namespace OrderSYS.Repository
                 command.Parameters.Add(":Brand", OracleDbType.Varchar2).Value = product.Brand;
                 command.Parameters.Add(":Model", OracleDbType.Varchar2).Value = product.Model;
                 command.Parameters.Add(":Description", OracleDbType.Varchar2).Value = product.Description;
-                command.Parameters.Add(":Price", OracleDbType.Decimal).Value = Convert.ToDecimal(product.Price);
+                command.Parameters.Add(":Price", OracleDbType.Decimal).Value = product.Price;
                 command.Parameters.Add(":Stock", OracleDbType.Int32).Value = product.Stock;
                 command.Parameters.Add(":Status", OracleDbType.Varchar2).Value = product.Status;
                 command.Parameters.Add(":Category", OracleDbType.Varchar2).Value = product.Category;
